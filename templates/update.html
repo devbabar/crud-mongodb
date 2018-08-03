@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block result %}
+
+<div class="container text-center">
+    <h1>Update Operation</h3>
+    <form id="update-form" method="POST" action="{{ url_for('update',id=id)}}">
+        {{ form.csrf_token }}
+        <h3>Name</h3>{{form.name}}
+        <h3>Language</h3>{{form.language}}<br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+{%endblock%}

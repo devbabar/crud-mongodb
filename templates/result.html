@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+{% block result %}
+
+	<div class="container" id="test">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Language</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+                {% for i in user_list%}
+                <tr>
+                    <td>{{ i["name"] }}</td>
+                    <td>{{ i["language"] }}</td>
+                    <td class="show-btn hidden"><a id="update-form-ajax" href="{{url_for('updateform',id=i['_id'])}}">
+                    	<button type="button" class="btn btn-success">update</button></a>
+                    </td>
+					<td class="show-delete-btn hidden"><a id="delete-ajax" href="{{url_for('delete',id=i['_id'])}}">
+						<button type="button" class="btn btn-danger">Delete</button></a>
+					</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{%endblock%}
