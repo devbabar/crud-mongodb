@@ -6,7 +6,7 @@ Simple application to perform basic Create, read, update, and delete (CRUD) oper
 ## Step 1:
 Create a folder.
 
-mkdir mongodb_pymongo
+$ mkdir mongodb_pymongo
 
 Create a virtual enviroment. 
 
